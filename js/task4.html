@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var button = document.getElementById('mybutton');
+var button2 = document.getElementById('mybutton2');
+var display = document.getElementById('count');
+var count = 0;
+button.addEventListener('click', function() {
+  count--;
+  display.innerHTML = count--; 
+});
+button2.addEventListener('click', function() {
+  count++;
+  display.innerHTML = count++; 
+});
+
+</script>
+<div class="varun">
+    <h1 id="count">0</h1>
+    <button id="mybutton">decrement</button>
+    <button id="mybutton2">increment</button>
+  </div>
+</body>
+</html>

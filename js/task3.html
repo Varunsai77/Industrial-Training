@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function vv()
+        {
+        var ss=["varun","naga","sai","durga","nani","tarun","reva","pandu","MSD"]
+        var col=["blue","cyan","pink","orange","violet","green","red","brown","black"]
+        var aa=document.getElementsByTagName("td")
+        for(i=0;i<aa.length;i++)
+        {
+           aa.item(i).innerHTML=ss[i];
+           aa[i].style.backgroundColor=col[i]
+        }
+    }
+    </script>
+    <table border="1px solid">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <button onclick="vv()">click</button>
+</body>
+</html>

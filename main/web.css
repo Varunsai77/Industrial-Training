@@ -1,0 +1,37 @@
+.iaa{
+ color: red;
+ font-size: 50px;
+ background-color: blueviolet;
+}
+#main{
+   background-color: brown;
+    height: 100px;
+    width: 100px;
+}
+span{
+    font-size: 50px;
+    color: blue;
+}
+*{
+    font-family: 'Courier New', Courier, monospace;
+   
+}
+input[type]{
+    color: rgb(59, 231, 36);
+}
+/*a[href]{
+    background-color: blue;
+}*/
+a:link{
+    color: pink;
+}
+a:visited{
+    color:red;
+}
+a:hover{
+    font-size: 50px;
+    color:green;
+}
+a:active{
+    color:yellow;
+}

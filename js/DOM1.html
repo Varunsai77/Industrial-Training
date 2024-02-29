@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> nani</p>
+    <p>hi nani</p>
+    <p>Lorem ipsum </p>
+    <h2 id="hello">head</h2>
+    <h2 id="hello">CME</h2>
+    <h3 class="hi">EEE</h3>
+    <h3 class="hi">ECE</h3>
+    <a id="my_anchor"></a>
+    <a href="">click</a>
+
+    <script>
+    //   const qs= document.querySelector("p")
+    //   console.log(qs)
+    //   qs.style.background='blue';
+    //   // by id
+    //   var hello=document.querySelectorAll("#hello")
+    //   console.log(hello)
+    //   hello[0].style.background="green";
+    //   hello[1].style.background="green";
+    //   //by class
+    //   var hi=document.querySelectorAll(".hi")
+    //   console.log(hi)
+    //   hi[0].style.background="orange";
+    //   hi[1].style.background="yellow";
+      //set atrribute
+      const MyAnch=document.getElementById('my_anchor')
+      MyAnch.setAttribute("#")
+      MyAnch.setAttribute('target',"_blank")
+     // creata element
+     const NewBtn= document.createElement("button");
+     NewBtn.setAttribute('id','btn_id');
+     const NewDiv= document.createElement("div")  
+     NewBtn.innerText="click me"
+     NewDiv.innerHtml= '<h1>new div</h1>' 
+     NewDiv.style.cssText=`height:200px;
+                           width:200px;
+                           color:red;
+                           padding:5px;
+                           background-color:lightblue;
+                           border-radius:50px;
+                           border:2px solid blue;`
+                           //append
+                           const bdy=document.body
+                           console.log(bdy)
+                           bdy.appendChild(NewBtn)
+                           bdy.appendChild(NewDiv)
+                       // event 
+                       const MyBtn =document.getElementById('btn_id');
+                       MyBtn.addEventListener("mouseover",MyFunc1)
+                       MyBtn.addEventListener("mouseout",MyFunc2)
+                       MyBtn.addEventListener("click",MyFunc3)
+                       
+                        function MyFunc1(){
+                            NewDIv.style.background
+                        }
+
+     </script>
+</body> 
+</html>

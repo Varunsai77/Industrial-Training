@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> map function</h1>
+    <script type="text/javascript">
+        var Year=[2002,2003,2004,2005,2006];
+        var ages=Year.map(function(ele,index,arr){
+        var ages=2024-ele;
+        return " current ages is"+ages;
+        })
+        function findages(year,index,arr){
+            console.log("the current ele is"+year)
+            console.log("element index position is"+index)
+            console.log("current array is"+arr)
+            var ages=2024-Year;
+            return "current age is"+ages;
+        }
+        console.table(Year);
+        console.table(ages);
+    </script>
+</body>
+</html>

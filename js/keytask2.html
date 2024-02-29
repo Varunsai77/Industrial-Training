@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     Enter name<input type="text" id="sai" onkeyup="get()">
+     <p id="ss"></p>
+     <p id="vv"></p>
+    <script>
+        function get(){
+            var aa=document.getElementById('sai').value
+            var len=aa.length
+            if(len<3){
+                document.getElementById('ss').innerText='please enter min 3 value';
+                 document.getElementById('ss').style.color='red'
+                }
+            document.getElementById('vv').innerHTML=len;
+        }
+    </script>
+</body> 
+</html>
