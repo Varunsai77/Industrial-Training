@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_Validations</title>
+</head>
+<style>
+    .error {
+  font-weight: bold;
+  font-style: italic;
+}
+.a1{
+    height:500px;
+    width:500px;
+    border: solid;
+    border-radius: 10%;
+}
+.b{
+    position: relative;
+    top: -10px;
+}
+.b1{
+    position: relative;
+    top: -10px;
+}
+.b2{
+    position: relative;
+    top: -10px;
+}
+.p{
+    height: 30px;
+    width: 360px;
+    position: relative;
+    top: 0px;
+  }
+  .p1{
+    height: 30px;
+    width: 360px;
+    position: relative;
+    top: 0px;
+  }
+  .p2{
+    height: 30px;
+    width: 360px;
+    position: relative;
+    top: 0px;
+  }
+  .btn{
+    height: 35px;
+    width: 360px;
+    background-color: green;
+  }
+</style>
+<body>
+    <center>
+        <div class="a1" >
+    <h1>Form Validations</h1>
+    <form id="myForm">
+        <label for="name" class="b">Name (8 - 50 characters):</label><br>
+        <input type="text" id="name" class="p" name="name" required><br>
+        <span id="nameError" class="error"></span><br>
+        <label for="email"  class="b1">Email:</label><br>
+        <input type="email" id="email" class="p1" name="email" required><br>
+        <span id="emailError" class="error"></span><br>
+        <label for="number"  class="b2">Phone Number(10 digits):</label><br>
+        <input type="text" id="number" class="p2" name="number" required><br>
+        <span id="numberError" class="error"></span><br>
+        <label for="password"  class="b1">password</label><br>
+        <input type="password" id="pass" class="p1" name="pass" required><br>
+        <span id="passError" class="error"></span><br>
+        <label for="gender"  class="b1">Gender</label><br>
+        <input type="checkbox">MALE
+        <input type="checkbox">FEMALE<br>
+        <span id="genderError" class="error"></span><br>
+        <input type="submit" value="Submit" class="btn">
+      </form>
+      <script>
+        const form = document.getElementById('myForm');
+
+form.addEventListener('submit', function(event) {
+  // Prevent the form from submitting
+  event.preventDefault();
+
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const number = document.getElementById('number');
+  const password = document.getElementById('pass');
+  const gender = document.getElementById('Gen');
+  const nameError = document.getElementById('nameError');
+  const emailError = document.getElementById('emailError');
+  const numberError = document.getElementById('numberError');
+  const passwordError = document.getElementById('passError');
+  const genderError = document.getElementById('genderError');
+
+
+  if (name.value.length < 8 || name.value.length > 50 ) {
+    // || !/^[a-zA-Z]+$/.test(name.value))
+    nameError.textContent = 'Name must contain 8 - 50 characters';
+    nameError.style.color = 'red';
+    return;
+  } else {
+    nameError.textContent = '';
+  }
+
+  if (email.value.indexOf('@') === -1) {
+    emailError.textContent = 'Invalid email address';
+    emailError.style.color = 'red';
+    return;
+  } else {
+    emailError.textContent = '';
+  }
+
+  if (number.value.toString().length !== 10 ) {
+    numberError.textContent = 'Number must have 10-digits ';
+    numberError.style.color = 'red';
+    return;
+  } else {
+    numberError.textContent = '';
+  }
+  if(password.value.length<8){
+    passwordError.textContent="at least 8 character ";
+    passwordError.style.color='red';
+    return;
+  } else{
+    passwordError.textContent=''
+  }
+  form.submit();
+});
+  </script>
+      </div>
+    </center>
+</body>
+</html>

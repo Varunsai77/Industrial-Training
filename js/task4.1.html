@@ -1,0 +1,98 @@
+<html>
+<title>Input Validation</title>
+<style>
+    .a{
+        border: 3px solid;
+         height: 9cm;
+         width: 9cm;
+         margin-left: 5%;
+       
+    }
+    .b{
+        position: relative;
+        font-size: 12.5px;
+        color: soild;
+        margin-left: 5%;
+    }
+    .p{
+        height:25px;
+        width: 8cm;
+    }
+  .error-message {
+    color: red;
+    font-size: 14px;
+  }
+  .h1{
+    position: relative;
+  }
+  .email{
+    position: relative;
+        font-size: 12.5px;
+        color: soild;
+        margin-left: 5%;
+    }
+    .phone{
+    position: relative;
+        font-size: 12.5px;
+        color: soild;
+        margin-left: 5%;
+    }
+    .button{
+        position: relative;
+        color: green;
+    }
+</style>
+</head>
+<body>
+<div class="a">
+    <h1>Form Validation</h1>
+    <div class="b">
+      <h3>Name (8-50 characters)</h3>
+     <input type="text"id="input-box" class="p">
+<div id="error-message" class="error-message"></div></div>
+<div class="email">
+<h3> Email :</h3>
+    <input type="email" id="email" class="p" > 
+</div>
+<div class="phone">
+    <h3> Phone Number ( 10 digits):</h3>
+    <input type="text" id="input-ph" class="p" >
+</div><br>
+<button onclick="fun()">Submit</button>
+<script>
+  var inputBox = document.getElementById('input-box');
+  var errorMessage = document.getElementById('error-message');
+  inputBox.addEventListener('input', function() {
+    var inputValue = inputBox.value;
+    if (inputValue.length < 8||inputValue.length === 10) {
+      errorMessage.textContent = 'Enter at least 8 characters';
+    } else {
+      errorMessage.textContent = '';
+    }
+    document.getElementById('input-box').innerText=length;
+  });
+  var inputemail = document.getElementById('email');
+  var errorMessage = document.getElementById('error-message');
+  inputemail.addEventListener('input', function() {
+    var inputValue = inputemail.value;
+    if (inputValue.length < 8) {
+      errorMessage.textContent = 'Enter vaild mail';
+    } else {
+      errorMessage.textContent = '';
+    }
+    document.getElementById('email').innerText=length;
+  });
+  var inputph = document.getElementById('input-ph');
+  var errorMessage = document.getElementById('error-message');
+  inputph.addEventListener('input', function() {
+    var inputValue = inputph.value;
+    if (inputValue.length < 10) {
+      errorMessage.textContent = 'Enter 10 digits phone number';
+    } else {
+      errorMessage.textContent = '';
+    }
+    document.getElementById('input-ph').innerText=length;
+  });
+</script>
+</body>
+</html>

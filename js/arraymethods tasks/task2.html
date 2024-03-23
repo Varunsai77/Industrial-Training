@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data=['varun','nani','durga','sai'];
+        document.write('Data is ' + data);
+        let get = prompt('Enter a Word to Find!');
+        let result = data.find(function (value) {
+            if(value===get){
+                return true;
+            }
+        });
+        if (result) {
+            document.write('<br>' + get + ' is found in the data.');
+        } else {
+            document.write('<br>' + get + ' is not found in the data.');
+        }
+    </script>
+</body>
+
+</html>

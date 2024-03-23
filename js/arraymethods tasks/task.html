@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="AEC()">AEC</button>
+    <button onclick="AECT()">AECT</button>
+    <button onclick="ACOE()">ACOE</button>
+    <button onclick="Thub()">Thub</button>
+    <script type="text/javascript">
+        var data=[{
+            clg:'AEC',
+            name:'we'   
+        },
+        {
+            clg:'AECT',
+            name:'www'   
+        },
+        {
+            clg:'ACOE',
+            name:'wwe'   
+        },
+        {
+             clg:'Thub',
+            name:'wwwe'
+        }];   
+        function AEC(){
+    var j=0;
+    for(var i=0;i<data.length;i++){
+        if(data[i].clg=="AEC"){
+            j++;
+            var h=document.createElement('h3');
+            h.innerHTML="Record"+j;
+            var p1=document.createElement('p');
+            p1.innerHTML=data[i].name;
+            var p2=document.createElement('p');
+            p2.innerHTML=data[i].clg;
+            document.body.appendChild(h);
+            document.body.appendChild(p1);
+            document.body.appendChild(p2);
+        }
+    }
+   }
+   function AECT(){
+    var j=0;
+    for(var i=0;i<data.length;i++){
+        if(data[i].clg=="AECT"){
+            j++;
+            var h=document.createElement('h3');
+            h.innerHTML="Record"+j;
+            var p1=document.createElement('p');
+            p1.innerHTML=data[i].name;
+            var p2=document.createElement('p');
+            p2.innerHTML=data[i].clg;
+            document.body.appendChild(h);
+            document.body.appendChild(p1);
+            document.body.appendChild(p2);
+        }
+    }
+   }
+   function ACOE(){
+    var j=0;
+    for(var i=0;i<data.length;i++){
+        if(data[i].clg=="ACOE"){
+            j++;
+            var h=document.createElement('h3');
+            h.innerHTML="Record"+j;
+            var p1=document.createElement('p');
+            p1.innerHTML=data[i].name;
+            var p2=document.createElement('p');
+            p2.innerHTML=data[i].clg;
+            document.body.appendChild(h);
+            document.body.appendChild(p1);
+            document.body.appendChild(p2);
+        }
+    }
+   }
+   function Thub(){
+    var j=0;
+    for(var i=0;i<data.length;i++){
+        if(data[i].clg=="Thub"){
+            j++;
+            var h=document.createElement('h3');
+            h.innerHTML="Record"+j;
+            var p1=document.createElement('p');
+            p1.innerHTML=data[i].name;
+            var p2=document.createElement('p');
+            p2.innerHTML=data[i].clg;
+            document.body.appendChild(h);
+            document.body.appendChild(p1);
+            document.body.appendChild(p2);
+        }
+    }
+   }
+    </script>
+    
+</body>
+</html>

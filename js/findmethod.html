@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find</title>
+</head>
+<body>
+    <script>
+        var courses=['html','css','bootstrap','js']
+        var a=courses.find((course,index) =>{
+            return course.startsWith('b');
+        });
+        console.log(a);
+        //anonymous function
+        var b=courses.find(function(course,index){
+            return course.endsWith('s')
+        });
+        console.log(b);
+        //named function
+        var c=courses.find(fun);
+        function fun(course,index){
+           return course.endsWith('l');
+        }
+        console.log(c);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Mail:<input id="mail" type="email" required><br>
+    <button onclick="check()">Check</button>
+    <script>
+        function check(){
+        let data=['ram@gmail.com','varun@yahoo.com','sai@hotmail.com','nani@bing.com'];
+        let get = document.getElementById('mail').value;
+        let result = data.find(function (value) {
+            if(value===get){
+                return true; 
+            }
+        });
+        if (result) {
+            document.write('<br>' + get + ' already Exists');
+        } else {
+            document.write('<br>' + get + ' is not found. You Can Proceed');
+        }
+    }
+    </script>
+</body>
+
+</html>

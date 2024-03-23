@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Every method</h1>
+    <script>
+        var marks=[99,72,45,66,77,32];
+        var r=marks.every((score,i)=>{
+        console.log(score);
+        return score>35;
+        })
+        console.log(r);
+        //an
+        var e=marks.every(function(score,i){
+        console.log(score);
+
+            return score>36;
+        })
+        console.log(e);
+        //named
+        var s=marks.every(fun)
+        function fun(score,i){
+            console.log(score);
+            return score>37;
+        }
+        console.log(s)
+    </script>
+</body>
+</html>

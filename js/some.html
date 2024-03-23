@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Some method </h1>
+    <script>
+        var names=['hi','hello world','check']
+        var a=names.some((name,i,arr)=>{
+            return name=='hello world';
+        })
+        console.log(a);
+        //an
+        var b=names.some(function(name,i,arr){
+            return name=='hi2';
+        })
+        console.log(b);
+        //named
+        var c=names.some(fun)
+        function fun(name,i,arr){
+            return name=='check';
+        }
+        console.log(c);
+    </script>
+</body>
+</html>
